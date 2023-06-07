@@ -1,2 +1,2 @@
 #!/bin/bash
-ls .anpv
+:%!ls -ap1 | awk '{ printf "%s,", $0 }' | sed 's/,$/\n/'
